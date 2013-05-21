@@ -6,6 +6,7 @@
 @cream:#ccccc8;
 /*@brown:#241d13;*/
 @brown: #0e0b07;
+@yel: #ebe82c;
 @red : #a9151a;
 @navy : #003e66;
 @white: white;
@@ -475,7 +476,8 @@ p {
 	}
 	
 	.glow{
-		text-shadow: 0 0 12px yellow !important;
+		text-shadow: -1px 1px 12px white, 1px 1px black, 0 0 12px fade(@yel,30) !important;
+		color: lighten(saturate(@red,100),10);
 	}
 	
 	

@@ -49,7 +49,6 @@ function linkName(){ //add selectors for name list
 						var contHeight = $bio.height();
 						contWidth = $bio.width();
 						bioCols = Math.ceil(txtHeight/contHeight);
-						console.log(bioCols);
 						if (bioCols > 1) {
 							var bioColWidth = contWidth*bioCols;
 							$bio.css({"-webkit-column-count":String(bioCols),	"width":String(bioColWidth)});
@@ -73,6 +72,7 @@ var aj_name = "../Name/";
 
 
 var positionTooltip = function(event) {
+	cycle = false;
 	var $t = $(event.target);
 	if(event.which && $t.is("li")){ //if mouse button is down and pointed at an li
 		$('div.tooltip').toggleClass("active inactive");	
@@ -112,7 +112,6 @@ $('.alpha li').bind({
 var clicked = function(event){
 	console.log("clicked")
 	var $t = $(event.target);
-	console.log($t);
 	if ($t.is("li")) alphaSelected($t);
 }
 
@@ -124,13 +123,11 @@ $('.alpha').bind({
 
 
 var alphaSelected = function(t){ //add click funciton for alphabet list
-	console.log("li clicked :: target = " + t);
 	hideTooltip();
 		$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
 		
 		var $li = t;
 		var $a = $li.find('a');
-		console.log($a);
 		$li.removeClass('passiveAlpha').addClass('activeAlpha');
 		var letter =  $a.attr('href')[1];
 		$('#backLetter').html(letter);

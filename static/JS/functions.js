@@ -1,22 +1,33 @@
-idleTime = 0;
-var j = 0;
-var delay = 500;
-var jamx = 0;
-var $current;
+var cycle = true;
+var $alphas;
+var $l;
+var i = 0;
+var cycleTime = 500;
 
-function cycle(){
-	$current = $("ul.alpha li:eq(" + j + ")");
-	$current.addClass("glow");
-	console.log($current);
-			(j == jmax) ? j=0 : j++;
-			cycle();
+function cyc(){
+	if(cycle){
+	if (i == 0) $($alphas[$alphas.length -1]).removeClass("glow");
+	$l = $($alphas[i]);
+	$l.toggleClass("glow ");
+	$l.prev().removeClass("glow");
+	if (i < $alphas.length -1 ){
+		i++;
 		
+		} else{i=0;}
+	
+	}else{
+		$alphas.removeClass("glow");
+		cycleTimer = null;
+	}
+
+
 }
 
 function init(){
 	$('#content').css('opacity','0');
 	//Increment the idle time counter every minute.
 	var idleInterval = setInterval("timerIncrement()", 30000); // 30 seconds
+	var cycleTimer = setInterval("cyc()", cycleTime); // 30 seconds
 	//Zero the idle timer on mouse movement.
 	$(this).mousemove(function (e) {
 	        idleTime = 0;
@@ -25,10 +36,9 @@ function init(){
 	     return false;
 	});
 	
-	$(body).css({
-	           'cursor' : 'none'
-	        });
-	cycle();
+//	$("body").css({
+//	           'cursor' : 'none'
+//	        });
 	
 }
 
@@ -62,17 +72,15 @@ function nameReset(){
 
 $(document).ready(function(){
 
-	
-	init();
-	
-	
-
-	cycle();
+		init();
  });
 
 $(window).load(function() {
-		$('.alpha li').addClass('passiveAlpha');
+		
 			jmax = $("ul.alpha li").length -1;
+			$('.alpha li').addClass('passiveAlpha');
+			$alphas = $(".alpha li").not(".spacer");
+
 	//	$('#content').css('opacity','0');
 });
 
