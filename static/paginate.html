@@ -1,0 +1,37 @@
+<html><head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="JS/easypaginate.js"></script>
+
+</head>
+	<body>
+		<ul id="items">
+		  <li>Page 1</li>
+		  <li>Page 2</li>
+		  <li>Page 3</li>
+		  <li>Page 4</li>
+		  <li>Page 5</li>
+		  <li>Page 6</li>
+		  <li>Page 7</li>
+		  <li>Page 8</li>
+		  <li>Page 9</li>
+		  <li>Page 10</li>
+		  <li>Page 11</li>
+		  <li>Page 12</li>
+		  <li>Page 13</li>
+		  <li>Page 14</li>
+		</ul>
+	
+		<script type="text/javascript">
+
+		  jQuery(function($){ 
+		  $('ul#items').easyPaginate({
+				step:3,
+				delay:10,
+				numeric:false,
+				auto:true
+			});
+		  }); 
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+<application xmlns="http://ns.adobe.com/air/application/2.7"> 
+    <id>example.html.WhosWho</id> 
+    <versionNumber>0.1</versionNumber> 
+    <filename>WhosWho</filename> 
+    <initialWindow> 
+		<fullscreen>true</fullscreen>
+        <content>who.html</content> 
+        <visible>true</visible> 
+        <width>1280</width> 
+        <height>720</height> 
+		
+    </initialWindow> 
+</application>
