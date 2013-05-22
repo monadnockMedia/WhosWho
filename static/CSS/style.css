@@ -78,7 +78,7 @@ ul {
 }
 ul.alpha {
   -webkit-box-sizing: border-box;
-  box-shadow: -1px -1px 20px #000000, inset 1px 1px 12px #ffffff, -1px 1px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: -1px -1px 20px #000000, inset 0px 1px 10px #ffffff, -1px 1px 12px rgba(0, 0, 0, 0.4);
   font-size: 1.5em;
   font-weight: bold;
   width: 8%;
@@ -90,6 +90,7 @@ ul.alpha {
 }
 ul.alpha li {
   text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5), -1px 1px 2px rgba(255, 255, 255, 0.4);
+  z-index: 999;
 }
 ul.alpha a {
   pointer-events: none;
@@ -297,7 +298,7 @@ ol:last-child {
 }
 p {
   line-height: 1.1em;
-  text-indent: 2em;
+  text-indent: 0;
   text-align: justify;
   padding-left: .5em;
 }
@@ -405,4 +406,23 @@ p {
 .glow {
   text-shadow: -1px 1px 12px #ffffff, 1px 1px #000000, 0 0 12px rgba(235, 232, 44, 0.8) !important;
   color: #f10008;
+}
+#back {
+  position: absolute;
+  left: 2%;
+  top: 93%;
+}
+#back h1 {
+  font-size: 1.25em;
+  color: #a9151a;
+  text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5), -1px 1px 2px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+#back.active {
+  visibility: visible;
+  pointer-events: auto;
+}
+#back.inactive {
+  visibility: hidden;
+  pointer-events: none;
 }

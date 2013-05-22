@@ -90,7 +90,7 @@ ul{
 	&.alpha{
 	
 		-webkit-box-sizing: border-box;
-		box-shadow:-1px -1px 20px black,inset 1px 1px 12px white, -1px 1px 12px fade(black, 40%);
+		box-shadow:-1px -1px 20px black,inset 0px 1px 10px white, -1px 1px 12px fade(black, 40%);
 		font-size: 1.5em;
 		font-weight:bold;
 		width:8%;
@@ -98,8 +98,10 @@ ul{
 		height:100%;
 		.flexbox;
 		text-align:center;
+		
 		& li{
 			.alphaShadow;
+			z-index:999;
 			}
 		& a {pointer-events: none;}
 		&:after{
@@ -343,7 +345,7 @@ ol:last-child {
 }
 p {
 	line-height:1.1em;
-	text-indent:2em;
+	text-indent:0;
 	text-align:justify;
 	padding-left:.5em;
 }
@@ -464,5 +466,24 @@ p {
 		color: lighten(saturate(@red,100),10);
 	}
 	
+	#back{
+		position: absolute;
+		left: 2%;
+		top: 93%;
+		& h1{
+			font-size: 1.25em;
+			color:@red;
+			.alphaShadow;
+			cursor:pointer;
+		}
+		&.active{
+			visibility:visible;
+			pointer-events:auto;
+		}
+		&.inactive{
+			visibility:hidden;
+			pointer-events:none;
+		}
+	}
 	
 	

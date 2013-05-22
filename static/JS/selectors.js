@@ -1,6 +1,7 @@
 
 
 var aj_bio = "../Bio/";
+var default_menu;
 
 function bioNav(){
 	$('.right li').click(function(){
@@ -123,7 +124,10 @@ $('.alpha').bind({
 
 
 var alphaSelected = function(t){ //add click funciton for alphabet list
+	default_menu = $('#sideMenu').html();
 	hideTooltip();
+		$("#back").removeClass("inactive");
+		$("#back").addClass("active");
 		$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
 		
 		var $li = t;
@@ -141,6 +145,13 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 
 
 };
+
+$("#back").click(function(){
+//	window.location.reload();
+	$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
+	cycle=true;
+	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
+})
 
 
 
