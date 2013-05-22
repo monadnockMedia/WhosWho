@@ -148,6 +148,7 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 
 $("#back").click(function(){
 //	window.location.reload();
+	$('#backLetter').html("");
 	$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
 	cycle=true;
 	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
