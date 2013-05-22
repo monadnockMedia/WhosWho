@@ -152,6 +152,8 @@ $("#back").click(function(){
 	$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
 	cycle=true;
 	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
+	$("#back").addClass("inactive");
+	$("#back").removeClass("active");
 })
 
 
