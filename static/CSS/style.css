@@ -339,15 +339,15 @@ p {
   box-shadow: 0.07em 0.07em 0.15em rgba(255, 255, 255, 0.3), inset -0.07em -0.07em 0.12em #003e66;
   border: none;
   position: absolute;
-  width: auto;
+  width: 1.7em;
   height: auto;
   background: #FFFFFF;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   z-index: 2;
-  left: 100px;
-  top: 100px;
+  left: 0px;
+  top: 0px;
   background-color: #8a9caa;
   text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5), -1px 1px 2px rgba(255, 255, 255, 0.4);
 }
@@ -364,9 +364,9 @@ p {
   content: " ";
   position: absolute;
   top: .7em;
-  left: -0.5em;
+  left: 1.6em;
   border-style: solid;
-  border-width: .5em .5em .5em 0;
+  border-width: .5em 0 .5em .5em ;
   border-color: transparent #8a9caa;
   display: block;
   width: 0;
@@ -386,36 +386,6 @@ p {
 }
 #bioPage li.active {
   opacity: 1;
-}
-#assist {
-  position: absolute;
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  visibility: hidden;
-  color: white;
-}
-#assist #container {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 0;
-  width: 100%;
-}
-#assist h3 {
-  padding: 1em;
-}
-#assist img {
-  width: 640px;
-  float: left;
-}
-#assist p {
-  width: 60%;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 1em;
-}
-#assist h1 {
-  font-family: Arial, Helvetica, sans-serif;
 }
 .glow {
   text-shadow: -1px 1px 12px #ffffff, 1px 1px #000000, 0 0 12px rgba(235, 232, 44, 0.3) !important;

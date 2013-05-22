@@ -381,15 +381,15 @@ p {
 	box-shadow: .07em .07em .15em fade(white,30), inset -.07em -.07em .12em @navy;
 	border:none;
 	position: absolute;
-	width: auto;
+	width: 1.7em;
 	height: auto;
 	background: #FFFFFF;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	z-index:2;
-	left:100px;
-	top:100px;
+	left:0px;
+	top:0px;
 	background-color:@graygreen;
 	& h3{
 		font-family:benton;
@@ -409,9 +409,9 @@ p {
 	content: " ";
 	position: absolute;
 	top: .7em;
-	left: -.5em;
+	left: 1.6em;
 	border-style: solid;
-	border-width: .5em .5em .5em 0;
+	border-width:  .5em 0 .5em .5em ;
 	border-color: transparent @graygreen;
 	display: block;
 	width: 0;
@@ -441,39 +441,7 @@ p {
 			
 	}
 	
-	#assist{
-		position: absolute;
-		background-color: black;
-		width:100%;
-		height:100%;
-		z-index:99;
-		& #container{
-			padding-left:20%;
-			padding-right:20%;
-			padding-top:0;
-			width:100%;
-		}
-		& h3{
-			padding:1em;
-		}
-		visibility:hidden;
-		& img{
-			width: 640px;
-			float:left;
-		}
-		color: white;
-		
-		& p{
-			width: 60%;
-			font-family: Arial, Helvetica, sans-serif;
-			margin-top:1em;
-		}
-		
-		& h1{
-			font-family: Arial, Helvetica, sans-serif;
-			
-		}
-	}
+
 	
 	.glow{
 		text-shadow: -1px 1px 12px white, 1px 1px black, 0 0 12px fade(@yel,30) !important;

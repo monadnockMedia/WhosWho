@@ -83,8 +83,8 @@ var positionTooltip = function(event) {
 		var vis = $tt.css("visibility");
 		if (vis === "hidden"){ $tt.toggleClass("active inactive");}
 		$tt.find('h3').html(letter);
-		var tooltipX = loc.left+tWide*1.5;
-		var tooltipY = loc.top - $t.width()/2;
+		var tooltipX = loc.left-tWide*1.5;
+		var tooltipY = loc.top ;
 		$tt.css({top: tooltipY, left: tooltipX});
 	}else{
 		hideTooltip();
