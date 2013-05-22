@@ -2,7 +2,7 @@ var cycle = true;
 var $alphas;
 var $l;
 var i = 0;
-var cycleTime = 600;
+var cycleTime = 1000;
 
 function cyc(){
 	if(cycle){

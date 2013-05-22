@@ -83,10 +83,14 @@ a{
 }
 	.inline{display:inline-block;}
 
+
 ul{
 	list-style:none;
 		line-height:1.5em;
 	&.alpha{
+	
+		-webkit-box-sizing: border-box;
+		box-shadow:-1px -1px 20px black,inset 1px 1px 12px white, -1px 1px 12px fade(black, 40%);
 		font-size: 1.5em;
 		font-weight:bold;
 		width:8%;
@@ -98,6 +102,18 @@ ul{
 			.alphaShadow;
 			}
 		& a {pointer-events: none;}
+		&:after{
+		/*	position: fixed;
+			content:" ";
+			z-index:0;
+			height: 100%;
+			width:10px;
+			background-color:lighten(@navy,5);
+			top:0;
+			left:attr(width);
+			margin-left:-.5%;
+			box-shadow: -1px 12px 2px black; */
+		}
 	}
 	
 }
@@ -444,7 +460,7 @@ p {
 
 	
 	.glow{
-		text-shadow: -1px 1px 12px white, 1px 1px black, 0 0 12px fade(@yel,30) !important;
+		text-shadow: -1px 1px 12px white, 1px 1px black, 0 0 12px fade(@yel,80) !important;
 		color: lighten(saturate(@red,100),10);
 	}
 	

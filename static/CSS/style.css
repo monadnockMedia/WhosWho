@@ -77,6 +77,8 @@ ul {
   line-height: 1.5em;
 }
 ul.alpha {
+  -webkit-box-sizing: border-box;
+  box-shadow: -1px -1px 20px #000000, inset 1px 1px 12px #ffffff, -1px 1px 12px rgba(0, 0, 0, 0.4);
   font-size: 1.5em;
   font-weight: bold;
   width: 8%;
@@ -91,6 +93,19 @@ ul.alpha li {
 }
 ul.alpha a {
   pointer-events: none;
+}
+ul.alpha:after {
+  /*	position: fixed;
+			content:" ";
+			z-index:0;
+			height: 100%;
+			width:10px;
+			background-color:lighten(@navy,5);
+			top:0;
+			left:attr(width);
+			margin-left:-.5%;
+			box-shadow: -1px 12px 2px black; */
+
 }
 #names {
   margin-top: 3.5em;
@@ -388,6 +403,6 @@ p {
   opacity: 1;
 }
 .glow {
-  text-shadow: -1px 1px 12px #ffffff, 1px 1px #000000, 0 0 12px rgba(235, 232, 44, 0.3) !important;
+  text-shadow: -1px 1px 12px #ffffff, 1px 1px #000000, 0 0 12px rgba(235, 232, 44, 0.8) !important;
   color: #f10008;
 }
