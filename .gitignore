@@ -2,4 +2,4 @@
 static/IMG/
 *.jpg
 *.zip
-.DS_STORE
+*DS_STORE
