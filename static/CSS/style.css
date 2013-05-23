@@ -404,7 +404,7 @@ p {
   opacity: 1;
 }
 .glow {
-  text-shadow: -1px 1px 12px #ffffff, 1px 1px #000000, 0 0 12px rgba(235, 232, 44, 0.8) !important;
+  text-shadow: -1px 1px 2px #ffffff, 1px -1px 2px #000000, 0 0 22px rgba(235, 232, 44, 0.8), 0 0 22px rgba(235, 232, 44, 0.8), 0 0 22px #ebe82c !important;
   color: #f10008;
 }
 #back {
