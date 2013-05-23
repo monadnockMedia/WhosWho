@@ -1,7 +1,18 @@
 
 
 var aj_bio = "../Bio/";
-var default_menu;
+var default_menu = $('#sideMenu').html();
+function reset(){
+	$('#content').animate({opacity:0}, 100);
+	$()
+	$('#backLetter').html("");
+	$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
+	cycle=true;
+	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
+	$("#back").addClass("inactive");
+	$("#back").removeClass("active");
+	
+}
 
 function bioNav(){
 	$('.right li').click(function(){
@@ -39,7 +50,7 @@ function linkName(){ //add selectors for name list
 			id = id.split("#")[1];
 			$('#full')
 				.animate({opacity:0, 'margin-left':300}, 100,'linear', function() {
-					$(this).load(aj_bio+id,{"id":id}, function (){
+					$(this).load(aj_bio+id,{"id":id,"readable":true}, function (){
 						
 						bioCols = 0;
 						bioPage = 0;
@@ -124,7 +135,6 @@ $('.alpha').bind({
 
 
 var alphaSelected = function(t){ //add click funciton for alphabet list
-	default_menu = $('#sideMenu').html();
 	hideTooltip();
 		$("#back").removeClass("inactive");
 		$("#back").addClass("active");
@@ -148,12 +158,7 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 
 $("#back").click(function(){
 //	window.location.reload();
-	$('#backLetter').html("");
-	$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
-	cycle=true;
-	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
-	$("#back").addClass("inactive");
-	$("#back").removeClass("active");
+	reset();
 })
 
 

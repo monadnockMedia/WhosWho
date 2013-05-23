@@ -32,14 +32,14 @@ class namelist:
 		return list
 
 class bio_id:
-    def POST(self, name):
+    def POST(self, _id):
 		webpy.header('Access-Control-Allow-Origin',      '*')
 		webpy.header('Access-Control-Allow-Credentials', 'true')
-		print(name)
-		id = name
+		readable = webpy.input().readable
+		print("ID arg ", readable)
 		bio = ""
 		with a_con:
-			cur.execute("SELECT * FROM WhosWho WHERE id = ?",[id])
+			cur.execute("SELECT * FROM WhosWho WHERE id = ?",[_id])
 			row = cur.fetchone()
 			img = row["Photo"]
 			print "ROWPHOTO = "+img
