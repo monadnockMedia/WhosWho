@@ -346,7 +346,7 @@ ol:last-child {
 p {
 	line-height:1.1em;
 	text-indent:0;
-	text-align:justify;
+
 	padding-left:.5em;
 }
 #full{
@@ -377,6 +377,15 @@ p {
 		width:100%;
 		box-shadow: 5px 5px 20px black;
 		}
+	&.readable{
+		background-color:black;
+		color:white;
+		text-shadow:none;
+		font-family: Arial, Helvetica, sans-serif ;
+		& h1{
+			font-family: Arial, Helvetica, sans-serif !important;
+		}
+	}
 
 	}
 	.right{
@@ -466,10 +475,39 @@ p {
 		0 0 22px fade(@yel,80),0 0 22px fade(@yel,80),0 0 22px fade(@yel,100) !important;
 		color: lighten(saturate(@red,100),10);
 	}
-	
 	#back{
-		position: absolute;
 		left: 2%;
+	}
+	
+	#access{
+		right:2%;
+		height:auto;
+		
+		padding: .25em;
+		border-radius: .4em;
+		
+	}
+	
+	.buttonup{
+		border: 1px solid @red;
+		background-color: @red;
+		fill: black;
+		box-shadow:1px -1px 2px fade(black, 50%), -1px 1px 2px fade(white, 40%), inset 2px -2px 4px 2px fade(white, 40%);
+	}
+	
+	.buttondown{
+		border: 1px solid darken(@red, 20);
+		background-color: darken(@red, 10);
+		fill: white;
+		box-shadow:1px -1px 2px 1px fade(white, 20%), -1px 1px 2px fade(black, 40%), inset -2px 2px 5px 2px fade(black, 40%);
+	
+	}
+	
+
+	
+	.button{
+		position: absolute;
+		
 		top: 93%;
 		& h1{
 			font-size: 1.25em;

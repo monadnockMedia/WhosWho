@@ -3,6 +3,8 @@ var $alphas;
 var $l;
 var i = 0;
 var cycleTime = 1000;
+var cycleTimer;
+var readable = false;
 
 function cyc(){
 	if(cycle){
@@ -23,11 +25,16 @@ function cyc(){
 
 }
 
+function setCyc(){
+	cycleTimer = setInterval("cyc()", cycleTime); // 
+}
+
 function init(){
 	$('#content').css('opacity','0');
 	//Increment the idle time counter every minute.
 	var idleInterval = setInterval("timerIncrement()", 30000); // 30 seconds
-	var cycleTimer = setInterval("cyc()", cycleTime); // 30 seconds
+	//var cycleTimer = setInterval("cyc()", cycleTime); // 
+	setCyc();
 	//Zero the idle timer on mouse movement.
 	$(this).mousemove(function (e) {
 	        idleTime = 0;

@@ -299,7 +299,6 @@ ol:last-child {
 p {
   line-height: 1.1em;
   text-indent: 0;
-  text-align: justify;
   padding-left: .5em;
 }
 #full {
@@ -336,6 +335,15 @@ p {
 .half img {
   width: 100%;
   box-shadow: 5px 5px 20px black;
+}
+.half.readable {
+  background-color: black;
+  color: white;
+  text-shadow: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.half.readable h1 {
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 .right {
   overflow: hidden;
@@ -408,21 +416,41 @@ p {
   color: #f10008;
 }
 #back {
-  position: absolute;
   left: 2%;
+}
+#access {
+  right: 2%;
+  height: auto;
+  padding: .25em;
+  border-radius: .4em;
+}
+.buttonup {
+  border: 1px solid #a9151a;
+  background-color: #a9151a;
+  fill: black;
+  box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5), -1px 1px 2px rgba(255, 255, 255, 0.4), inset 2px -2px 4px 2px rgba(255, 255, 255, 0.4);
+}
+.buttondown {
+  border: 1px solid #4e0a0c;
+  background-color: #7c0f13;
+  fill: white;
+  box-shadow: 1px -1px 2px 1px rgba(255, 255, 255, 0.2), -1px 1px 2px rgba(0, 0, 0, 0.4), inset -2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+}
+.button {
+  position: absolute;
   top: 93%;
 }
-#back h1 {
+.button h1 {
   font-size: 1.25em;
   color: #a9151a;
   text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5), -1px 1px 2px rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }
-#back.active {
+.button.active {
   visibility: visible;
   pointer-events: auto;
 }
-#back.inactive {
+.button.inactive {
   visibility: hidden;
   pointer-events: none;
 }

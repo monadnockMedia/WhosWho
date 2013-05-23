@@ -11,6 +11,7 @@ function reset(){
 	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
 	$("#back").addClass("inactive");
 	$("#back").removeClass("active");
+	setCyc();
 	
 }
 
@@ -50,7 +51,7 @@ function linkName(){ //add selectors for name list
 			id = id.split("#")[1];
 			$('#full')
 				.animate({opacity:0, 'margin-left':300}, 100,'linear', function() {
-					$(this).load(aj_bio+id,{"id":id,"readable":true}, function (){
+					$(this).load(aj_bio+id,{"id":id,"readable":~~(readable)}, function (){ //double bitwise NOT converts true to 1, false to 0;
 						
 						bioCols = 0;
 						bioPage = 0;
@@ -161,5 +162,11 @@ $("#back").click(function(){
 	reset();
 })
 
-
+$("#access").click(function(){
+	console.log("readability triggered")
+	$(this).toggleClass("buttondown buttonup");
+	readable = !readable
+	$(".half").toggleClass("readable", readable);
+	
+})
 
