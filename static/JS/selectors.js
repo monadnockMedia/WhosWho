@@ -69,7 +69,7 @@ function linkName(){ //add selectors for name list
 		var $li = $(this);
 		var $a = $(this).find('a');
 
-		$li.removeClass('passiveName').addClass('activeName');
+		$li.removeClass('hover passiveName').addClass('activeName');
 		var id =  $a.attr('href');
 		id = id.split("#")[1];
 		$('#full')

@@ -109,6 +109,7 @@ ul.alpha:after {
 
 }
 #names {
+  -webkit-transition: all .33s;
   margin-top: 3.5em;
   width: auto;
   display: -webkit-box;
@@ -198,11 +199,9 @@ ol:last-child {
   background-color: rgba(138, 156, 170, 0.6);
 }
 .activeName {
-  -webkit-transition: all .25s;
   color: #a9151a;
 }
 .passiveName {
-  -webkit-transition: all 1s;
   color: #ffffff;
 }
 #sidebar {
