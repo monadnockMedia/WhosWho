@@ -36,49 +36,78 @@ function bioNav(){
 var bioCols = 0;
 var bioPage = 0;
 var contWidth = 0;
+var bioselect = false;
 
 function linkName(){ //add selectors for name list
-	$('#names li').click(function(){  //A name has been selected
-			$('#names li').addClass('passiveName'); // set all name blocks inactive
-			if ( !Boolean(Number($('#content').css('opacity'))) ){
+	console.log("binding");
+	
+	
+	function nameEnter(ev){
+	 //if mouseup has occured, do not remove active class
+			console.log("enter");
+			var $t = $(ev.currentTarget);
+			$t.addClass("hover");
+		
+		
+	}
+	var nameExit = function(ev){
+	 //if mouseup has occured, do not remove active class
+			var $t = $(ev.currentTarget);
+			$t.removeClass("hover")
+			
+		
+
+	}
+
+	var nameUp = function(ev){  //A name has been selected
+		bioselect = true;
+		console.log("nameup")
+		$('#names li').addClass('passiveName'); // set all name blocks inactive
+		if ( !Boolean(Number($('#content').css('opacity'))) ){
 				$('#content').animate({opacity:1},1000);
-			}
-			var $li = $(this);
-			var $a = $(this).find('a');
-
-			$li.removeClass('passiveName').addClass('activeName');
-			var id =  $a.attr('href');
-			id = id.split("#")[1];
-			$('#full')
-				.animate({opacity:0, 'margin-left':300}, 100,'linear', function() {
-					$(this).load(aj_bio+id,{"id":id,"readable":~~(readable)}, function (){ //double bitwise NOT converts true to 1, false to 0;
-						
-						bioCols = 0;
-						bioPage = 0;
-
-						$bio = $(this).find('#bio');
-						
-						var txtHeight = $bio[0].scrollHeight;
-						var contHeight = $bio.height();
-						contWidth = $bio.width();
-						bioCols = Math.ceil(txtHeight/contHeight);
-						if (bioCols > 1) {
-							var bioColWidth = contWidth*bioCols;
-							$bio.css({"-webkit-column-count":String(bioCols),	"width":String(bioColWidth)});
-						}else{
-							$("#bioPage").remove();
-						}
-					
-					
-					
-					});
-
-				})
-				.animate({opacity:1,'margin-left':0},500,bioNav);
-
-
 		}
-	);
+		var $li = $(this);
+		var $a = $(this).find('a');
+
+		$li.removeClass('passiveName').addClass('activeName');
+		var id =  $a.attr('href');
+		id = id.split("#")[1];
+		$('#full')
+			.animate({opacity:0, 'margin-left':300}, 100,'linear', 
+			function() {
+				$(this).load(aj_bio+id,{"id":id,"readable":~~(readable)}, 
+				function (){ //double bitwise NOT converts true to 1, false to 0;
+						
+					bioCols = 0;
+					bioPage = 0;
+
+					$bio = $(this).find('#bio');
+					
+					var txtHeight = $bio[0].scrollHeight;
+					var contHeight = $bio.height();
+					contWidth = $bio.width();
+					bioCols = Math.ceil(txtHeight/contHeight);
+					if (bioCols > 1) {
+						var bioColWidth = contWidth*bioCols;
+						$bio.css({"-webkit-column-count":String(bioCols),	"width":String(bioColWidth)});
+					}else{
+						$("#bioPage").remove();
+					}
+					
+					
+					
+				});
+
+			})
+			.animate({opacity:1,'margin-left':0},500,bioNav);
+		}
+		$('#names > li').bind({
+
+			mouseenter : nameEnter,
+			mouseleave: nameExit,
+			mouseup: nameUp
+		})
+
 }
 
 var aj_name = "../Name/";
@@ -131,7 +160,9 @@ var clicked = function(event){
 $('.alpha').bind({
 	mouseup: clicked,
 	mouseleave: hideTooltip
-	});
+});
+
+
 
 
 

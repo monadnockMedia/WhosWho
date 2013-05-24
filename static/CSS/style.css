@@ -115,6 +115,9 @@ ul.alpha:after {
   -webkit-box-orient: vertical;
   text-align: left;
 }
+.hover {
+  color: #ebe82c !important;
+}
 ol {
   list-style: none;
 }
