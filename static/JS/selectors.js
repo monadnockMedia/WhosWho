@@ -151,6 +151,7 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 			.animate({opacity:0, 'margin-left':-200}, 100,'linear', function() {
 				$(this).load(aj_name+letter,{"letter":letter},nameReset);
 			})
+			.animate({opacity:1,'margin-left':0},linkName);
 
 
 

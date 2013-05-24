@@ -10,8 +10,8 @@ cur = a_con.cursor()
 imgurl="IMG/PEOPLE/"
 urls = (
     '/Name/(.*)', 'namelist',
-	'/Bio/(.*)', 'bio_id',
-	'/','index'
+	'/Bio/(.*)', 'bio_id'
+	
 )
 
 class index:
