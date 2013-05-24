@@ -480,15 +480,45 @@ p {
 	}
 	
 	#access{
+		-webkit-transition: all .25s;
 		right:2%;
-		height:auto;
-		
+		height:45px;
+		overflow:hidden;
 		padding: .25em;
 		border-radius: .4em;
+		& p{
+			display:inline;
+			width:1em;
+			margin:0;
+			padding:0;
+			font-size:70%;
+			color:white;
+			font-family: Arial, Helvetica;
+		}
+		& svg{
+			position:absolute;
+			right:0;
+		}
+		
+		
+		
 		
 	}
 	
+	#access_text{
+		
+		display:inline-block;
+		margin:0;
+		padding:0;
+		position:absolute;
+		right:48px;
+		width:8em;
+		text-align: center;
+	}
+	
 	.buttonup{
+		width:45px;
+		height:45px;
 		border: 1px solid @red;
 		background-color: @red;
 		fill: black;
@@ -496,6 +526,8 @@ p {
 	}
 	
 	.buttondown{
+		width:270px;
+		height:45px;
 		border: 1px solid darken(@red, 20);
 		background-color: darken(@red, 10);
 		fill: white;
@@ -507,8 +539,8 @@ p {
 	
 	.button{
 		position: absolute;
-		
 		top: 93%;
+		
 		& h1{
 			font-size: 1.25em;
 			color:@red;

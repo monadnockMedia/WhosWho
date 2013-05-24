@@ -10,8 +10,13 @@ cur = a_con.cursor()
 imgurl="IMG/PEOPLE/"
 urls = (
     '/Name/(.*)', 'namelist',
-	'/Bio/(.*)', 'bio_id'
+	'/Bio/(.*)', 'bio_id',
+	'/','index'
 )
+
+class index:
+	def GET(self):
+		raise webpy.seeother('/static/who.html')
 
 class namelist:
     def POST(self, name):
