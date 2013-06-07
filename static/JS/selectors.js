@@ -15,8 +15,9 @@ function reset(){
 	
 }
 
-function bioNav(){
+function bioNav(){  //bio pagination
 	$('.right li').click(function(){
+			click.play();
 		if($(this).hasClass("active")){
 			var dir = parseInt($(this).attr("dir"));
 			var $bio = $('#bio');
@@ -61,6 +62,7 @@ function linkName(){ //add selectors for name list
 
 	var nameUp = function(ev){  //A name has been selected
 		bioselect = true;
+			click.play();
 		console.log("nameup")
 		$('#names li').addClass('passiveName'); // set all name blocks inactive
 		if ( !Boolean(Number($('#content').css('opacity'))) ){
@@ -114,6 +116,7 @@ var aj_name = "../Name/";
 
 
 var positionTooltip = function(event) {
+
 	cycle = false;
 	var $t = $(event.target);
 	if(event.which && $t.is("li")){ //if mouse button is down and pointed at an li
@@ -167,6 +170,7 @@ $('.alpha').bind({
 
 
 var alphaSelected = function(t){ //add click funciton for alphabet list
+		click.play();
 	hideTooltip();
 		$("#back").removeClass("inactive");
 		$("#back").addClass("active");
@@ -191,10 +195,12 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 
 $("#back").click(function(){
 //	window.location.reload();
+		click.play();
 	reset();
 })
 
 $("#access").click(function(){
+	click.play();
 	console.log("readability triggered")
 	$(this).toggleClass("buttondown buttonup");
 	readable = !readable

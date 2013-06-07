@@ -71,6 +71,7 @@ function nameReset(){
 		auto:false,
 		nextprev:false
 	});
+	$("#pagination li").click(	function(){click.play()});
 
 	
 }
