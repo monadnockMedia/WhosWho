@@ -5,7 +5,7 @@ var default_menu = $('#sideMenu').html();
 function reset(){
 	$('#content').animate({opacity:0}, 100);
 	$()
-	$('#backLetter').html("");
+	$('#nameHeader').css("opacity","0");
 	$('.alpha li').addClass('passiveAlpha'); // set all alpha blocks inactive
 	cycle=true;
 	$('#sideMenu').html(default_menu).toggleClass("flexspread flexmiddle");
@@ -176,6 +176,7 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 		var $a = $li.find('a');
 		$li.removeClass('passiveAlpha').addClass('activeAlpha');
 		var letter =  $a.attr('href')[1];
+		$('#nameHeader').css("opacity","1");
 		$('#backLetter').html(letter);
 
 		$('#sideMenu')

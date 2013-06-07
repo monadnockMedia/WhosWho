@@ -25,6 +25,9 @@
 	font-weight:bold;
 }
 
+
+
+
 @font-face {
 	font-family: gaudy;
 	src: url("../FONT/gaudy.ttf") format("truetype");
@@ -259,8 +262,21 @@ ol:last-child {
 		font-size:3em;
 		color:fade(darken(@navy,10), 70);
 	}
+	& #tip{
+		color:@red;
+		.alphaShadow;
+		font-family: benton;
+		font-size:1.2em;
+		position:absolute;
+		left:4em;
+		top:1.25em;
+		display: inline-block;
+		
+		
+	}
 }
 
+#nameHeader{opacity:0; -webkit-transition:all .33s;}
 .cutout{
 	text-shadow: -1px 3px 2px @navy,
 	 0 0 2px fade(black,50);
@@ -276,6 +292,7 @@ ol:last-child {
 	margin:none;
 	.flexbox;
 	overflow:visible;
+	& p{font-style: italic;color:fade( darken(white,10),90);}
 	& h1{
 
 		z-index: -1;
@@ -288,16 +305,12 @@ ol:last-child {
 			position:absolute;
 			content:attr(title);
 			text-shadow:none;
-			background: -webkit-linear-gradient(103deg, black, white);
+			background: -webkit-linear-gradient(90deg, lighten(black,10), white);
 			 -webkit-background-clip: text;
 			 -webkit-text-fill-color: transparent;
 	
 			
 		}
-	}
-	& p{
-		color:white;
-		
 	}
 }
 
@@ -308,7 +321,7 @@ ol:last-child {
 	left:0;
 	width:100%;
 	height:100%;
-	background-image: url('../IMG/bg.png'),;
+	background-image: url('../IMG/bg2.png'),;
 	background-size: 100% 100%;
 }
 #content{
