@@ -46,13 +46,13 @@ class bio_id:
 			if readable == True:
 				img = row["Photo"]
 				bio+="<div class = 'half left readable'><img class = 'headshot' src ='%s%s' /></div>" % (imgurl,img)
-				bio+="<div class = 'half right readable'><div id ='bio' class='readable'><h1>%s, %s %s</h1><h1>(%s-%s)</h1><p>%s</p></div>" % (row["Last"],row["First"],row["Middle"],row["Birth"],row["Death"],row["Body1"])
+				bio+="<div class = 'half right readable'><div id ='bio' class='readable'><h1>%s, %s %s</h1><h1>(%s-%s)</h1><p>%s</p><p>%s</p></div>" % (row["Last"],row["First"],row["Middle"],row["Birth"],row["Death"],row["Body1"],row["Body2"])
 				#	bio+="</div>"
 				bio+=  "<ol id ='bioPage'><li id ='biop' class = '' dir = '-1' >&#8592prev</li><li>&#9674</li><li id ='bion' class = 'active' dir = '1'>next&#8594</li></ol></div>"
 			else:
 				img = row["Photo"]
 				bio+="<div class = 'half left'><img class = 'headshot' src ='%s%s' /></div>" % (imgurl,img)
-				bio+="<div class = 'half right'><div id ='bio'><h1>%s, %s %s</h1><h1>(%s-%s)</h1><p>%s</p></div>" % (row["Last"],row["First"],row["Middle"],row["Birth"],row["Death"],row["Body1"])
+				bio+="<div class = 'half right'><div id ='bio'><h1>%s, %s %s</h1><h1>(%s-%s)</h1><p>%s</p><p>%s</p></div>" % (row["Last"],row["First"],row["Middle"],row["Birth"],row["Death"],row["Body1"],row["Body2"])
 				#	bio+="</div>"
 				bio+=  "<ol id ='bioPage'><li id ='biop' class = '' dir = '-1' >&#8592prev</li><li>&#9674</li><li id ='bion' class = 'active' dir = '1'>next&#8594</li></ol></div>"
 		

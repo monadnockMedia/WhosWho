@@ -304,8 +304,11 @@ ol:last-child {
   position: relative;
 }
 #bio p {
-  margin: 0 1em 0 1em;
+  margin: 0 1em .5em 1em;
   padding: 0;
+}
+#bio p:first-letter {
+  font-weight: bold;
 }
 #wrapper {
   width: 100%;
