@@ -43,9 +43,9 @@ function init(){
 	     return false;
 	});
 	
-//	$("body").css({
-//	           'cursor' : 'none'
-//	        });
+	$("body").css({
+	           'cursor' : 'none'
+	        });
 	
 }
 
