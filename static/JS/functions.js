@@ -5,6 +5,7 @@ var i = 0;
 var cycleTime = 1000;
 var cycleTimer;
 var readable = false;
+var timeout = 15;
 
 function cyc(){
 	if(cycle){
@@ -51,9 +52,9 @@ function init(){
 
 function timerIncrement() {
     idleTime = idleTime + 1;
-    if (idleTime > 3) {
+    if (idleTime > timeout) {
 //		alert("reloading");
-        //window.location.reload();
+        window.location.reload();
     }
 }
 
