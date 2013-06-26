@@ -6,7 +6,7 @@ var cycleTime = 1000;
 var cycleTimer;
 var readable = false;
 var timeout = 15;
-
+var hidecursor = true;
 function cyc(){
 	if(cycle){
 	if (i == 0) $($alphas[$alphas.length -1]).removeClass("glow");
@@ -44,9 +44,11 @@ function init(){
 	     return false;
 	});
 	
-	$("body").css({
-	           'cursor' : 'none'
-	        });
+	if(hidecursor){
+		$("body").css({
+	           	'cursor' : 'none'
+	        	});
+	}
 	
 }
 
