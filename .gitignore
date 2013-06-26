@@ -3,3 +3,5 @@ static/IMG/
 *.jpg
 *.zip
 *DS_STORE
+*.pyc
+
