@@ -7,6 +7,14 @@ var cycleTimer;
 var readable = false;
 var timeout = 15;
 var hidecursor = true;
+
+function playclick(){
+
+	click.pause();
+	click.load();
+		click.play();
+}
+
 function cyc(){
 	if(cycle){
 	if (i == 0) $($alphas[$alphas.length -1]).removeClass("glow");
@@ -74,7 +82,7 @@ function nameReset(){
 		auto:false,
 		nextprev:false
 	});
-	$("#pagination li").click(	function(){click.play()});
+	$("#pagination li").click(	function(){playclick()});
 
 	
 }
