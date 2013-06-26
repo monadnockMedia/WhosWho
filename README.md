@@ -8,9 +8,9 @@ REQUIRES
 
 * [Python 2.7.5](http://python.org/download/releases/2.7.5/)	:	http://python.org/download/releases/2.7.5/
 
-* [WhosWho Images](http://monadnock.org/sanbox/ww_img.zip)	:	http://monadnock.org/sanbox/ww_img.zip
+* [WhosWho Images](http://monadnock.org/IMG.zip)
 
-* [Google Chrome](https://www.google.com/intl/en/chrome/browser/)	:	https://www.google.com/intl/en/chrome/browser/
+* [Google Chrome standalone](https://www.google.com/intl/en/chrome/browser/index.html?msi=true#eula)	:	https://www.google.com/intl/en/chrome/browser/index.html?msi=true#eula
 	
 
 
