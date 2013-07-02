@@ -57,7 +57,7 @@ function init(){
 	           	'cursor' : 'none'
 	        	});
 	}
-	
+	jQuery.fx.interval = 100;
 }
 
 function timerIncrement() {
@@ -82,7 +82,7 @@ function nameReset(){
 		auto:false,
 		nextprev:false
 	});
-	$("#pagination li").click(	function(){playclick()});
+	$("#pagination li").mousedown(	function(){playclick()});
 
 	
 }

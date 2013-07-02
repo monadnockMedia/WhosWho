@@ -16,8 +16,8 @@ function reset(){
 }
 
 function bioNav(){  //bio pagination
-	$('.right li').click(function(){
-			playclick().play();
+	$('.right li').mousedown(function(){
+			playclick();
 		if($(this).hasClass("active")){
 			var dir = parseInt($(this).attr("dir"));
 			var $bio = $('#bio');
@@ -105,9 +105,9 @@ function linkName(){ //add selectors for name list
 		}
 		$('#names > li').bind({
 
-			mouseenter : nameEnter,
-			mouseleave: nameExit,
-			mouseup: nameUp
+		//	mouseenter : nameEnter,
+		//	mouseleave: nameExit,
+			mousedown: nameUp
 		})
 
 }
@@ -149,20 +149,21 @@ var hideTooltip = function() {
 
 
 $('.alpha li').bind({
-	mouseenter : positionTooltip,
-	mouseleave: hideTooltip,
-	mousedown: showTooltip
+//	mouseenter : positionTooltip,
+//	mouseleave: hideTooltip,
+//	mousedown: showTooltip
 });
 
 var clicked = function(event){
+	cycle = false;
 	console.log("clicked")
 	var $t = $(event.target);
 	if ($t.is("li")) alphaSelected($t);
 }
 
 $('.alpha').bind({
-	mouseup: clicked,
-	mouseleave: hideTooltip
+	mousedown: clicked,
+//	mouseleave: hideTooltip
 });
 
 
@@ -193,13 +194,13 @@ var alphaSelected = function(t){ //add click funciton for alphabet list
 
 };
 
-$("#back").click(function(){
+$("#back").mousedown(function(){
 //	window.location.reload();
 		playclick();
 	reset();
 })
 
-$("#access").click(function(){
+$("#access").mousedown(function(){
 	playclick();
 	console.log("readability triggered")
 	$(this).toggleClass("buttondown buttonup");
